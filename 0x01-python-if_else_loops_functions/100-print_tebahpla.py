@@ -7,3 +7,5 @@ for c in range(ord('z'), ord('a') - 1, -1):
         i = 32
     elsei:
         i = 0
+else:
+    return 0

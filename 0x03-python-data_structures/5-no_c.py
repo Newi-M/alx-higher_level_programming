@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 def no_c(my_string):
     '''string without c and C'''
-    new_str = ""
-    for i in my_string:
-        if i is not 'c' and i is not 'C':
-            new_str += i
-    return (new_str)
+    copy = [x for x in my_string if x != 'c' and x != 'C']
+    return ("".join(copy))

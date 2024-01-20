@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-i = 1
 for j in (122, 96, -1):
-    if (i % 2) == 0:
-        print("{}".format(chr(j - 32)), end="")
-        i = i + 1
+    if (j % 2) == 0:
+        i = 0
     else:
-        print("{}".format(chr(j)), end="")
+        i = 32
+    print("{}".format(chr(j - i)), end="")

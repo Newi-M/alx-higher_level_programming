@@ -9,15 +9,15 @@ class Rectangle:
         """Initialize a new Rectangle.
 
         Args:
-            width (int): width of the new rectangle.
-            height (int): height of the new rectangle.
+            width (int): width of new rectangle.
+            height (int): height of new rectangle.
         """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Retrieve width of the rectangle."""
+        """Retrieve width of Rectangle."""
         return self.__width
 
     @width.setter
@@ -30,7 +30,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Retrieve height of the rectangle."""
+        """Retrieve height of Rectangle."""
         return self.__height
 
     @height.setter
@@ -40,3 +40,13 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """Return area of Rectangle."""
+        return (self.__width * self.__height)
+
+    def perimeter(self):
+        """Return perimeter of Rectangle."""
+        if self.__width == 0 or self.__height == 0:
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
